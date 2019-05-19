@@ -4,7 +4,6 @@ metadata:
   name: mysql-exporter
   labels:
     app: mysql-exporter
-    pvc: percona-cstor-claim
 spec:
   replicas: 1
   selector: 
@@ -14,7 +13,6 @@ spec:
     metadata:
       labels: 
         app: mysql-exporter
-        pvc: percona-cstor-claim
     spec:
       containers:
         - resources:
