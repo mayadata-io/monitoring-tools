@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/pandyamarut/kube-patcher/pkg/kubernetes"
+	"github.com/mayadata.io/monitoring-tools/application-metrics-exporter/cassandra/cassandra-exporter-installer/pkg/kubernetes"
 )
 
 func main() {

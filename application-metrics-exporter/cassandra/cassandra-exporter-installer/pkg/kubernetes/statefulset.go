@@ -94,7 +94,6 @@ func StatefulsetPatch(envMap map[string]string) error {
 		return err
 	}
 	patchBytes, err := jsonpatch.CreateMergePatch(oldResourceManifestByte, newResourceManifestByte)
-	//fmt.Println(string(patchBytes))
 	_, err = ClientSet.AppsV1().StatefulSets(envMap["namespace"]).Patch(context.TODO(), envMap["resourceName"], types.StrategicMergePatchType, patchBytes, metav1.PatchOptions{}, "")
 	if err != nil {
 		return err
